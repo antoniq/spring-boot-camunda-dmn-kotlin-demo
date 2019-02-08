@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Definitions_12elxi4" name="DRD" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="autoInsurance" name="VehicleInsurance">
+    <extensionElements>
+      <biodi:bounds x="150" y="150" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1">
+      <input id="input_1">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>model</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ogyzpg">
+        <inputExpression id="LiteralExpression_19m52o3" typeRef="boolean">
+          <text>new</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1slhbu2">
+        <inputExpression id="LiteralExpression_1q2kldo" typeRef="string">
+          <text>financing</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" name="fullKasko" typeRef="double" />
+      <rule id="DecisionRule_1tcwi1c">
+        <inputEntry id="UnaryTests_0n39uqu">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mpx3ad">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12qllt2">
+          <text>"credit"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wl1z43">
+          <text>1250.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0uvd7o9">
+        <inputEntry id="UnaryTests_00bb55a">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o3ryof">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03lu1dc">
+          <text>"leasing"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08jsma4">
+          <text>1250.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1d7ckua">
+        <inputEntry id="UnaryTests_0mogxb4">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sewgd0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_152upiy">
+          <text>"cash"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y15ngc">
+          <text>1100.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0i7jfwr">
+        <inputEntry id="UnaryTests_1q0uwwv">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t26coo">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a6ahox">
+          <text>"credit"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kipg2r">
+          <text>900.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pn8gnl">
+        <inputEntry id="UnaryTests_1mp0aks">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f9xru2">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lnrtsv">
+          <text>"cash"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lwhr0y">
+          <text>850.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13mdnd4">
+        <inputEntry id="UnaryTests_1cqnujx">
+          <text>"Audi"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_160g8q0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lq1xpv">
+          <text>"credit"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0imqgkq">
+          <text>1250.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wxupzf">
+        <inputEntry id="UnaryTests_0f66dnn">
+          <text>"Audi"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_049xeir">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d4royh">
+          <text>"leasing"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_045j04d">
+          <text>1300.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xsda2n">
+        <inputEntry id="UnaryTests_158beq8">
+          <text>"Audi"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06wpwg0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x0ff5m">
+          <text>"cash"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11jh87n">
+          <text>1190.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q9d29i">
+        <inputEntry id="UnaryTests_1qaht05">
+          <text>"Audi"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07et526">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i56yw4">
+          <text>"credit"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kxagjl">
+          <text>980.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0seaxz1">
+        <inputEntry id="UnaryTests_0gr94sy">
+          <text>"Audi"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1og1poz">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pca1a8">
+          <text>"cash"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1621iyo">
+          <text>900.00</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
